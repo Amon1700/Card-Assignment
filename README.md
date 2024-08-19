@@ -15,6 +15,7 @@
    - cd into `Backend` folder.
    - run `npm install` command.
    - then run `npm run dev` command.
+   - update the MongoDB URL in the index.js file
 
 4. **To Add Card:**
     ### HTTP Method

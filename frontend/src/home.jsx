@@ -14,7 +14,13 @@ const HomePage = () => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
+
         const data = await response.json();
+
+        if (response.ok && !data.length) {
+          throw new Error("Add few card first");
+        }
+
         setCards(data);
       } catch (error) {
         setError(error.message);
@@ -30,7 +36,10 @@ const HomePage = () => {
     e.preventDefault(); // Prevent the default form submission
     if (searchQuery) {
       // Redirect to Google with the search query
-      window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`, "_blank");
+      window.open(
+        `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`,
+        "_blank"
+      );
     }
   };
 

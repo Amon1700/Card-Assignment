@@ -24,7 +24,7 @@ const cardCrtl = {
       const result = await cardService.getAllCard();
 
       if (!result.length) {
-        return res.status(400).send({ message: "first add few cards" });
+        return res.status(200).send({ message: "first add few cards" });
       }
 
       return res.status(200).send(result);
