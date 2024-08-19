@@ -31,6 +31,6 @@
 
     ```json
     {
-        "title": "uiu",
-        "description": "s"
+        "title": "Manage Your Account",
+        "description": "Easily update your personal information, change your password, and manage your preferences to enhance your experience"
     }
